@@ -3,3 +3,4 @@ slug: String
 summary: String
 publication-date: DateTime
 content: Content
+categories: Category[] -> posts
