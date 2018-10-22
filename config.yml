@@ -2,4 +2,4 @@ project-name: Reusing the wheel
 base-path: /
 context:
   static:
-    Reusing the wheel
+    site-title: Reusing the wheel
