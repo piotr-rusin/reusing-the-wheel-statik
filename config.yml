@@ -1,4 +1,4 @@
-project-name: Reusing the wheel
+project-name: reusing-the-wheel-statik
 base-path: /
 context:
   static:
