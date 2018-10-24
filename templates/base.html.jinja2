@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ language_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title}} | {% endif %}{{ site_title }}</title>
+    <link rel="stylesheet" href="{% asset 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% asset 'css/fonts.css' %}" />
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      {# instances of TopMenuItem (for example) #}
+      {% for item in top_menu_items | sort(attribute='weight', reverse=True) %}
+        {% if item.view_name %}
+          <li><a href="{% url item.view_name %}">{{ item.view_name|capitalize }}</a></li>
+        {% else %}
+          <li><a href="{% url 'page' item.page.pk %}">{{ item.page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <hr/>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+<footer>
+    <hr/>
+    {# an instance of MarkdownPartial (for example) #}
+    {{ custom_footer.content }}
+</footer>
+</body>
+</html>
