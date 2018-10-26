@@ -1,0 +1,13 @@
+{% extends "base.html.jinja2" %}
+
+{% block content %}
+  <div class="article-meta">
+    <h1><span class="title">{{ page_data.title }}</span></h1>
+    {% if author %}<h2 class="author">{{ author }}</h2>{% endif %}
+    {% if page_data.date %}<h2 class="date">{{ page_data.date | date("%Y/%m/%d") }}</h2>{{ end }}
+  </div>
+
+  <main>
+    {{ page_data.content }}
+  </main>
+{% endblock %}
