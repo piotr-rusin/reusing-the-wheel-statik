@@ -1,0 +1,18 @@
+{% extends "base.html.jinja2" %}
+
+{% block content %}
+  {% if not is_home %}
+    <h1>{{ title }}</h1>
+  {% endif %}
+  {# An instance of MarkdownPartial (for example) #}
+  {% text.content %}
+  <ul>
+    {% for element in listed_elements %}
+    <li>
+      <span class="date">{{ element.date | date("%Y/%m/%d") }}</span>
+      <a href="{% url view_name element.pk %}">{{ element.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
