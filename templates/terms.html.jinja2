@@ -1,0 +1,15 @@
+{% extends "base.html.jinja2" %}
+
+{% block content %}
+<h1>{{ .Title }}</h1>
+<ul class="terms">
+  {% for term, member_count in terms_by_count %}
+  <li>
+    <a href="{% url view_name term.pk %}">
+      {{ term.title}}
+    </a>
+    ({{ member_count }})
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
