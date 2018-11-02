@@ -1,4 +1,4 @@
 name: String
 date: DateTime
-descrition: Content
+description: Content
 source-code-url: String
