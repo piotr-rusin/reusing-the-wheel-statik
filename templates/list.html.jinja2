@@ -10,7 +10,7 @@
     {% for element in listed_elements %}
     <li>
       <span class="date">{{ element.date | date("%Y/%m/%d") }}</span>
-      <a href="{% url view_name element.pk %}">{{ element.title }}</a>
+      <a href="{% url view_name, element.pk %}">{{ element.title }}</a>
     </li>
     {% endfor %}
   </ul>
