@@ -4,3 +4,6 @@ context:
   static:
     site-title: Reusing the wheel
     language-code: en-us
+  dynamic:
+    custom-footer: session.query(MarkdownPartial).filter_by(pk = "footer").one()
+    top-menu-items: session.query(TopMenuItem).all()
