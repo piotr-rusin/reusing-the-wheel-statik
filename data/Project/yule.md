@@ -1,5 +1,5 @@
 ---
-title: Yule
+name: Yule
 date: 2017-05-16T10:59:50+00:00
 source-code-url: https://github.com/piotr-rusin/yule
 ---

@@ -1,5 +1,5 @@
 ---
-title: Blog Engine
+name: Blog Engine
 date: 2016-12-06T13:33:10+00:00
 source-code-url: https://github.com/piotr-rusin/blog-engine
 ---

@@ -1,5 +1,5 @@
 ---
-title: Spam Lists
+name: Spam Lists
 date: 2016-06-16T15:59:43+00:00
 source-code-url: https://github.com/piotr-rusin/spam-lists
 ---

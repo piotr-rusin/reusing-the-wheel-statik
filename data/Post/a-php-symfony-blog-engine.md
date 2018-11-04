@@ -8,7 +8,6 @@ projects:
 tags:
   - php
   - symfony
-url: /2016/12/a-php-symfony-blog-engine/
 
 ---
 A few months ago I started a blog engine project based on [Symfony framework][1]. I&#8217;ve been adding things and making changes to it from time to time. Since August, I took a longer break in its development because I wanted to focus on other things, but now I&#8217;m returning to the project.

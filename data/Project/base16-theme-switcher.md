@@ -1,5 +1,5 @@
 ---
-title: Base16 Theme Switcher
+name: Base16 Theme Switcher
 date: 2017-10-22T14:39:20+00:00
 source-code-url: https://github.com/piotr-rusin/base16-theme-switcher
 ---
