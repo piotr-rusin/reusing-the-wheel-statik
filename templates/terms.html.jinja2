@@ -2,6 +2,10 @@
 
 {% block content %}
   <h1>{{ title }}</h1>
+  {# An instance of MarkdownPartial (for example) #}
+  {% if text %}
+    {{ text.content }}
+  {% endif %}
   <ul class="terms">
     {% for term in taxonomy_terms | sort(attribute='name') %}
     <li>
