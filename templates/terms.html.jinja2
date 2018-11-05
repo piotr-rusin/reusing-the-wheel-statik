@@ -3,7 +3,7 @@
 {% block content %}
   <h1>{{ title }}</h1>
   <ul class="terms">
-    {% for term in taxonomy_terms %}
+    {% for term in taxonomy_terms | sort(attribute='name') %}
     <li>
       <a href="{% url view_name, term %}">
         {{ term.name }}
