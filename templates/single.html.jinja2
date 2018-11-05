@@ -2,12 +2,12 @@
 
 {% block content %}
   <div class="article-meta">
-    <h1><span class="title">{{ page_data.title }}</span></h1>
+    <h1><span class="title">{{ article.title }}</span></h1>
     {% if author %}<h2 class="author">{{ author }}</h2>{% endif %}
-    {% if page_data.date %}<h2 class="date">{{ page_data.date | date("%Y/%m/%d") }}</h2>{{ end }}
+    {% if article.date %}<h2 class="date">{{ article.date | date("%Y/%m/%d") }}</h2>{% endif %}
   </div>
 
   <main>
-    {{ page_data.content }}
+    {{ article.content }}
   </main>
 {% endblock %}
