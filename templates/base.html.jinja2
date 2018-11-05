@@ -16,7 +16,7 @@
           {% if item.view_name %}
             <li><a href="{% url item.view_name %}">{{ item.view_name|capitalize }}</a></li>
           {% else %}
-            <li><a href="{% url 'page', item.page.pk %}">{{ item.page.title }}</a></li>
+            <li><a href="{% url 'page', item.page %}">{{ item.page.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
