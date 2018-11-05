@@ -5,7 +5,7 @@
 <ul class="terms">
   {% for term in taxonomy_terms %}
   <li>
-    <a href="{% url view_name, term.pk %}">
+    <a href="{% url view_name, term %}">
       {{ term.title}}
     </a>
     ({{ term.posts | length }})
