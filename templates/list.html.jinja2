@@ -5,7 +5,9 @@
     <h1>{{ title }}</h1>
   {% endif %}
   {# An instance of MarkdownPartial (for example) #}
-  {% text.content %}
+  {% if text %}
+    {{ text.content }}
+  {% endif %}
   <ul>
     {% for element in listed_elements %}
     <li>
