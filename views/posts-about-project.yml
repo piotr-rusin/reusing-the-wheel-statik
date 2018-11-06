@@ -1,0 +1,15 @@
+path:
+  template: /projects/{{ project.pk }}
+  for-each:
+    project: session.query(Project).all()
+template: list
+context:
+  static:
+    view-name: post
+  for-each:
+    listed-elements: |
+      session.query(Post).filter(
+        Post.projects.any(pk=project.pk)
+      ).order_by(
+        Post.date.desc()
+      ).all()
