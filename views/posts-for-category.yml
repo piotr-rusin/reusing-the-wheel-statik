@@ -1,0 +1,15 @@
+path:
+  template: /categories/{{ category.pk }}
+  for-each:
+    category: session.query(Category).all()
+template: list
+context:
+  static:
+    view-name: post
+  for-each:
+    listed-elements: |
+      session.query(Post).filter(
+        Post.categories.any(pk=category.pk)
+      ).order_by(
+        Post.date.desc()
+      ).all()
