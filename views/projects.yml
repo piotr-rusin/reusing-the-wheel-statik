@@ -1,0 +1,8 @@
+path: /projects
+template: terms
+context:
+  static:
+    view-name: posts-about-project
+  dynamic:
+    taxonomy-terms: session.query(Project).all()
+    text: session.query(MarkdownPartial).filter_by(pk="project-list-introduction").one_or_none()
