@@ -1,0 +1,5 @@
+path:
+  template: /{{ article.pk }}
+  for-each:
+    article: session.query(Page).all()
+template: single
