@@ -1,0 +1,7 @@
+path: /tags
+template: terms
+context:
+  static:
+    view-name: posts-for-tag
+  dynamic:
+    taxonomy-terms: session.query(Tag).all()
