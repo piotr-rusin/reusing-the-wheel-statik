@@ -1,0 +1,15 @@
+path:
+  template: /tags/{{ tag.pk }}
+  for-each:
+    tag: session.query(Tag).all()
+template: list
+context:
+  static:
+    view-name: post
+  for-each:
+    listed-elements: |
+      session.query(Post).filter(
+        Post.tags.any(pk=tag.pk)
+      ).order_by(
+        Post.date.desc()
+      ).all()
