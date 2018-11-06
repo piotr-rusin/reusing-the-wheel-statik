@@ -1,0 +1,7 @@
+path: /categories
+template: terms
+context:
+  static:
+    view-name: posts-for-category
+  dynamic:
+    taxonomy-terms: session.query(Category).all()
