@@ -1,0 +1,5 @@
+path:
+  template: /{{ article.date | date("%Y/%m/%d") }}/{{ article.pk }}
+  for-each:
+    article: session.query(Post).all()
+template: single
