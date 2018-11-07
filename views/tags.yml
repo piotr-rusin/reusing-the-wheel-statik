@@ -4,4 +4,4 @@ context:
   static:
     view-name: posts-for-tag
   dynamic:
-    taxonomy-terms: session.query(Tag).all()
+    taxonomy-terms: list(x for x in list(session.query(Tag).all()) if len(x.posts) > 1)

@@ -1,7 +1,7 @@
 path:
   template: /tags/{{ tag.pk }}
   for-each:
-    tag: session.query(Tag).all()
+    tag: list(x for x in list(session.query(Tag).all()) if len(x.posts) > 1)
 template: list
 context:
   static:
