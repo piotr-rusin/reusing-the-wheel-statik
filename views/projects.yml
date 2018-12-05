@@ -1,5 +1,5 @@
 path: /projects
-template: terms
+template: projects
 context:
   static:
     view-name: posts-about-project

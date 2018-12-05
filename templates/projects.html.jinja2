@@ -1,0 +1,18 @@
+{% extends "base.html.jinja2" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  {# An instance of MarkdownPartial (for example) #}
+  {% if text %}
+    {{ text.content }}
+  {% endif %}
+    <ul class="terms">
+      {% for term in taxonomy_terms | sort(attribute='date') %}
+        <li>
+          <a href="{% url view_name, term %}">
+            {{ term.name }} {% if term.posts | length > 0 %} ({{ term.posts | length }}) {% endif %}
+          </a> {% if term.summary %}- {{ term.summary }} {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+{% endblock %}
