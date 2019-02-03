@@ -8,13 +8,16 @@
   {% if text %}
     {{ text.content }}
   {% endif %}
-  <ul>
-    {% for element in listed_elements %}
-    <li>
-      <span class="date">{{ element.date | date("%Y/%m/%d") }}</span>
-      <a href="{% url view_name, element %}">{{ element.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+  {% for year, elements in listed_elements | group_by_year %}
+    <h3>{{year}}</h3>
+    <ul>
+      {% for element in elements %}
+      <li>
+        <span class="date">{{ element.date | date("%m/%d") }}</span>
+        <a href="{% url view_name, element %}">{{ element.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 {% endblock %}
 
