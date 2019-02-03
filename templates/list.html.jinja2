@@ -8,6 +8,7 @@
   {% if text %}
     {{ text.content }}
   {% endif %}
+  <h2>Blog posts</h2>
   {% for year, elements in listed_elements | group_by_year %}
     <h3>{{year}}</h3>
     <ul>
