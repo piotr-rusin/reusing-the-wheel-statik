@@ -1,7 +1,0 @@
-path: /tags
-template: terms
-context:
-  static:
-    view-name: posts-for-tag
-  dynamic:
-    taxonomy-terms: list(x for x in list(session.query(Tag).all()) if len(x.posts) > 1)

@@ -1,0 +1,25 @@
+{% extends "base.html.jinja2" %}
+
+{% macro render_taxonomy_list(plural_name, view_name, terms) -%}
+  <h2>{{ plural_name }}</h2>
+  <ul class="terms">
+  {% for term in terms | sort(attribute='name') -%}
+    <li>
+      <a href="{% url view_name, term %}">
+        {{ term.name }}
+      </a>
+      ({{ term.posts | length }})
+    </li>
+  {%- endfor %}
+  </ul>
+{%- endmacro %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  {# An instance of MarkdownPartial (for example) #}
+  {% if text %}
+    {{ text.content }}
+  {% endif %}
+  {{ render_taxonomy_list("Categories", "posts-for-category", categories)}}
+  {{ render_taxonomy_list("Tags", "posts-for-tag", tags)}}
+{% endblock %}
