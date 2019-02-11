@@ -7,3 +7,7 @@ def group_by_year(values):
     for v in values:
         values_by_year[v.date.year].append(v)
     return values_by_year.items()
+
+@register.filter(name='deslugify')
+def deslugify(value):
+    return ' '.join(value.split('-')).capitalize()
