@@ -16,7 +16,7 @@
         {# instances of TopMenuItem (for example) #}
         {% for item in top_menu_items | sort(attribute='weight', reverse=True) %}
           {% if item.view_name %}
-            <li><a href="{% url item.view_name %}">{{ item.view_name|capitalize }}</a></li>
+            <li><a href="{% url item.view_name %}">{{ item.pk|deslugify }}</a></li>
           {% else %}
             <li><a href="{% url 'page', item.page %}">{{ item.page.title }}</a></li>
           {% endif %}
