@@ -6,15 +6,18 @@ body {
 }
 
 /* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
+.menu, footer ul { padding: 0; }
+.menu li, footer ul li { display: inline-block; }
+.article-meta, .menu a, footer span, footer a {
   text-decoration: none;
-  background: #eee;
   padding: 5px;
-  border-radius: 5px;
 }
-.menu, .article-meta, footer { text-align: center; }
+
+.menu li + li:before, footer ul li + li:before {
+  content: " / ";
+}
+
+header, .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
 footer a { text-decoration: none; }
 hr {
