@@ -60,7 +60,7 @@ At some moment, I decided to replace inheritance with composition for these clas
 
 At this moment, the code of the method looked like this:
 
-{{< highlight python >}}
+```language-python
 def __lt__(self, other):
     ''' Check if the other is smaller
     This method is necessary for sorting and search
@@ -75,7 +75,7 @@ def __lt__(self, other):
         return self.value < other
     except TypeError:
         return NotImplemented
-{{</ highlight >}}
+```
 
 I also had to fix an error in its original implementation: it compared `self.value` to the `other` object, not to `other.value`.
 
@@ -93,7 +93,7 @@ As you can see in the code, my method handled `TypeError` raised by the comparis
 
 I fixed this compatibility error by modifying the code like this:
 
-{{< highlight python >}}
+```language-python
 def __lt__(self, other):
     ''' Check if the other is smaller.
 
@@ -114,7 +114,7 @@ def __lt__(self, other):
             return self.to_unicode() < other.to_unicode()
     except AttributeError:
         return NotImplemented
-{{< / highlight >}}
+```
 
 
 Still, the behaviour of the method was inconsistent between the versions: when using Python 2 to execute the comparison of an object of a `Hostname` type to an object of `IPv4Address` type, the `Name.__lt__(other)` method of `Hostname.value` returned `NotImplemented` value, and Python interpreter handled the comparison. However, when using Python 3, the comparison operation raised `TypeError` to be handled by my method.
@@ -123,7 +123,7 @@ Returning `NotImplemented` constant in response to an `AttributeError` being rai
 
 I also noticed the docstring of my method was misleading, because its first line sounded like the method was responsible for &#8220;other < self&#8221; comparison, not &#8220;self < other&#8221;. I fixed it, too, and the current code of the method looks like this:
 
-{{< highlight python >}}
+```language-python
 def __lt__(self, other):
     ''' Check if self is less than the other
 
@@ -156,7 +156,7 @@ def __lt__(self, other):
 
 def _compare_strings(self, other):
     return self.to_unicode() < other.to_unicode()
-{{< / highlight >}}
+```
 
 ## Releasing the project
 
