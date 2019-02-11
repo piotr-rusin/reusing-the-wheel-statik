@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if title %}{{ title }} | {% endif %}{{ site_title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
     <link rel="stylesheet" href="{% asset 'css/style.css' %}" />
     <link rel="stylesheet" href="{% asset 'css/fonts.css' %}" />
   </head>
@@ -31,5 +32,7 @@
       {# an instance of MarkdownPartial (for example) #}
       {{ custom_footer.content }}
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js"></script>
   </body>
 </html>
