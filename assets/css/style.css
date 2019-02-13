@@ -26,6 +26,10 @@ code {
   font-size: 85%;
 }
 
+.read-more {
+  text-align: right;
+}
+
 /* misc elements */
 img, iframe, video { max-width: 100%; }
 main { hyphens: auto; }

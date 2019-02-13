@@ -1,0 +1,24 @@
+{% extends "base.html.jinja2" %}
+
+{% block content %}
+  {% if not is_home %}
+    <h1>{{ title }}</h1>
+  {% endif %}
+  {# An instance of MarkdownPartial (for example) #}
+  {% if text %}
+    {{ text.content }}
+  {% endif %}
+  <h2>Most recent posts</h2>
+  <ul>
+    {% for element in listed_elements %}
+    <li>
+      <span class="date">{{ element.date | date("%m/%d") }}</span>
+      <a href="{% url view_name, element %}">{{ element.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="read-more">
+    <a href="{% url 'archives' %}">All posts</a>
+  </div>
+{% endblock %}
+
