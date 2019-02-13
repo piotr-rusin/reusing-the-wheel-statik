@@ -2,7 +2,7 @@ path:
   template: /projects/{{ project.pk }}
   for-each:
     project: session.query(Project).all()
-template: list
+template: list-grouped-by-year
 context:
   static:
     view-name: post

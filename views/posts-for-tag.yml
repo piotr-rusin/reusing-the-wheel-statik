@@ -2,7 +2,7 @@ path:
   template: /tags/{{ tag.pk }}
   for-each:
     tag: list(x for x in list(session.query(Tag).all()) if len(x.posts) > 1)
-template: list
+template: list-grouped-by-year
 context:
   static:
     view-name: post
