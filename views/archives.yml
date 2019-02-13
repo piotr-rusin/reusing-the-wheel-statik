@@ -1,0 +1,10 @@
+path: /archives
+template: list-grouped-by-year
+context:
+  static:
+    title: Archives
+    is-home: False
+    view-name: post
+  dynamic:
+    text: session.query(MarkdownPartial).filter_by(pk = "archives-introduction").one_or_none()
+    listed-elements: session.query(Post).order_by(Post.date.desc()).all()
