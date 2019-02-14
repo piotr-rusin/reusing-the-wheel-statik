@@ -1,9 +1,8 @@
 ---
 title: Migrating to Hugo and GitHub Pages
 date: 2017-11-12T16:43:40+01:00
-categories:
-  - blog
 tags:
+  - blog
   - disqus
   - hugo
   - jekyll

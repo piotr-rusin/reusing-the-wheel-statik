@@ -1,11 +1,10 @@
 ---
 title: 'A new project: base16-theme-switcher'
 date: 2017-10-22T14:39:20+00:00
-categories:
-  - development
 projects:
   - base16-theme-switcher
 tags:
+  - development
   - bash
   - configuration
   - linux

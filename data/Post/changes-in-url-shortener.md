@@ -1,12 +1,11 @@
 ---
 title: Changes in url-shortener
 date: 2016-12-04T16:09:24+00:00
-categories:
-  - development
 projects:
   - url-shortener
   - spam-lists
 tags:
+  - development
   - database-migration
   - dependency-injection
   - front-end

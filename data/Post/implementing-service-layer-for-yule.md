@@ -1,11 +1,10 @@
 ---
 title: Implementing service layer for Yule
 date: 2017-06-05T09:17:41+00:00
-categories:
-  - development
 projects:
   - yule
 tags:
+  - development
   - dependency-injection
   - integration-testing
   - java

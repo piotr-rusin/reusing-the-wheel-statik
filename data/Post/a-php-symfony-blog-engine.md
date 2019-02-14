@@ -1,11 +1,10 @@
 ---
 title: A PHP/Symfony blog engine
 date: 2016-12-06T13:33:10+00:00
-categories:
-  - development
 projects:
   - blog-engine
 tags:
+  - development
   - php
   - symfony
 

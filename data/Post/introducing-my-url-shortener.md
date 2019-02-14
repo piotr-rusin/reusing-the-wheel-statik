@@ -1,12 +1,11 @@
 ---
 title: Introducing my URL shortener
 date: 2016-08-05T13:18:43+00:00
-categories:
-  - development
 projects:
   - url-shortener
   - spam-lists
 tags:
+  - development
   - flask
   - python
   - sqlalchemy

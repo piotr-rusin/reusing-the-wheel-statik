@@ -1,11 +1,10 @@
 ---
 title: Spam-lists – a host blacklist/whitelist library
 date: 2016-06-16T15:59:43+00:00
-categories:
-  - development
 projects:
   - spam-lists
 tags:
+  - development
   - python
 
 ---

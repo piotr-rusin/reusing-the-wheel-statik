@@ -1,11 +1,10 @@
 ---
 title: The first stable release of spam-lists
 date: 2016-11-30T10:44:41+00:00
-categories:
-  - development
 projects:
   - spam-lists
 tags:
+  - development
   - python
 
 ---

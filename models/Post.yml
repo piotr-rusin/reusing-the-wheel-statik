@@ -2,6 +2,5 @@ title: String
 summary: String
 date: DateTime
 content: Content
-categories: Category[] -> posts
 tags: Tag[] -> posts
 projects: Project[] -> posts

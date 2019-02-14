@@ -1,7 +1,6 @@
 {% extends "base.html.jinja2" %}
 
-{% macro render_taxonomy_list(plural_name, view_name, terms) -%}
-  <h2>{{ plural_name }}</h2>
+{% macro render_taxonomy_list(view_name, terms) -%}
   <ul class="terms">
   {% for term in terms | sort(attribute='name') -%}
     <li>
@@ -20,6 +19,5 @@
   {% if text %}
     {{ text.content }}
   {% endif %}
-  {{ render_taxonomy_list("Categories", "posts-for-category", categories)}}
-  {{ render_taxonomy_list("Tags", "posts-for-tag", tags)}}
+  {{ render_taxonomy_list("posts-for-tag", tags)}}
 {% endblock %}

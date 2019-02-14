@@ -1,0 +1,8 @@
+
+path: /tags
+template: tags
+context:
+  static:
+    title: Tags
+  dynamic:
+    tags: list(x for x in list(session.query(Tag).all()) if len(x.posts) > 1)

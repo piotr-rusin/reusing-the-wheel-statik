@@ -1,11 +1,10 @@
 ---
 title: 'Url-shortener: a demo and more refactoring'
 date: 2016-12-31T16:13:22+00:00
-categories:
-  - development
 projects:
   - url-shortener
 tags:
+  - development
   - python
   - refactoring
   - single-responsibility-principle
