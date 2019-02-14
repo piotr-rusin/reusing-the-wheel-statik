@@ -12,7 +12,7 @@
   <ul>
     {% for element in listed_elements %}
     <li>
-      <span class="date">{{ element.date | date("%m/%d") }}</span>
+      <span class="date">{{ element.date | date("%d %b %Y") }}</span> - 
       <a href="{% url view_name, element %}">{{ element.title }}</a>
     </li>
     {% endfor %}
