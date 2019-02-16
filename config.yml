@@ -4,5 +4,10 @@ context:
   static:
     site-title: Reusing the wheel
     language-code: en-us
-  dynamic:
-    top-menu-items: session.query(TopMenuItem).all()
+    top-menu-views:
+      - home
+      - archives
+      - tags
+      - projects
+    top-menu-pages:
+      - about

@@ -1,5 +1,0 @@
-weight: Integer
-# if set, the item will be treated as a view
-view-name: String
-# required if view-name is not set, ignored otherwise
-page: Page

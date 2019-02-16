@@ -14,13 +14,11 @@
     <header><h1>{{ site_title }}</h1></header>
     <nav>
       <ul class="menu">
-        {# instances of TopMenuItem (for example) #}
-        {% for item in top_menu_items | sort(attribute='weight', reverse=True) %}
-          {% if item.view_name %}
-            <li><a href="{% url item.view_name %}">{{ item.pk|deslugify }}</a></li>
-          {% else %}
-            <li><a href="{% url 'page', item.page %}">{{ item.page.title }}</a></li>
-          {% endif %}
+        {% for view in top_menu_views %}
+          <li><a href="{% url view %}">{{ view|deslugify }}</a></li>
+        {% endfor %}
+        {% for page in top_menu_pages %}
+          <li><a href="{% url 'page', page %}">{{ page|deslugify }}</a></li>
         {% endfor %}
       </ul>
       <hr/>
