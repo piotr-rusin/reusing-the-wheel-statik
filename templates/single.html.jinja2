@@ -1,13 +1,22 @@
 {% extends "base.html.jinja2" %}
 
+{% macro article_tags(tags) -%}
+  {% for tag in tags %} <a href="{% url 'posts-for-tag', tag.pk %}">{{ tag.name }}</a>{% endfor %}
+{%- endmacro %}
+
 {% block content %}
-  <div class="article-meta">
-    <h1><span class="title">{{ article.title }}</span></h1>
-    {% if author %}<h2 class="author">{{ author }}</h2>{% endif %}
-    {% if article.date %}<h2 class="date">{{ article.date | date("%Y/%m/%d") }}</h2>{% endif %}
-  </div>
+  <h1><span class="title">{{ article.title }}</span></h1>
 
   <main>
     {{ article.content }}
   </main>
+
+  <div class="article-meta">
+    {% if author %}{{ author }}{% endif %}
+    {% if article.date %}Posted on: {{ article.date | date("%d %b %Y") }} <br>{% endif %}
+    {% if article.tags or article.projects %}
+      Tagged: {% for tag in article.tags %}{% if loop.index > 1 %}, {% endif %}<a href="{% url 'posts-for-tag', tag.pk %}">{{ tag.name }}</a>{% endfor %}
+      {% for proj in article.projects %}{% if loop.index > 1 or article.tags %}, {% endif %}<a href="{% url 'posts-about-project', proj.pk %}">{{ proj.name }}</a>{% endfor %}
+    {% endif %}
+  </div>
 {% endblock %}
