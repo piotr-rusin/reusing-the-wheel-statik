@@ -2,6 +2,7 @@ MIT License
 
 Copyright (c) 2017 Yihui Xie - for template code and assets originally taken
 from [XMin project](https://github.com/yihui/hugo-xmin)
+
 Copyright (c) 2019 Piotr Rusin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
